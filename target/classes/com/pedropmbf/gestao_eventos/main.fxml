@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.pedropmbf.gestao_eventos.controller.Controller" stylesheets="@style.css" spacing="10" alignment="CENTER">
+
+    <!-- Barra de controle (minimizar e fechar) -->
+    <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-background-color: #2c3e50;">
+        <Button text="—" onAction="#minimizarJanela" styleClass="window-button"/>
+        <Button text="X" onAction="#fecharJanela" styleClass="window-button"/>
+    </HBox>
+
+    <children>
+        <Label text="Sistema de Gestão de Eventos"/>
+
+        <!-- Seção para cadastrar evento -->
+        <TextField fx:id="nomeEventoField" promptText="Nome do Evento"/>
+        <TextField fx:id="dataEventoField" promptText="Data do Evento (dd/MM/yyyy)"/>
+        <TextField fx:id="localEventoField" promptText="Local do Evento"/>
+        <TextField fx:id="capacidadeEventoField" promptText="Capacidade do Evento"/>
+        <Button text="Cadastrar Evento" onAction="#cadastrarEvento"/>
+
+        <!-- Exibição de mensagens -->
+        <Label fx:id="mensagemLabel" text=""/>
+
+        <!-- Seção para cadastrar participante -->
+        <TextField fx:id="nomeParticipanteField" promptText="Nome do Participante"/>
+        <TextField fx:id="nomeEventoParticipanteField" promptText="Nome do Evento"/>
+        <ComboBox fx:id="categoriaIngressoComboBox"/>
+        <Button text="Inscrever Participante" onAction="#inscreverParticipante"/>
+
+        <!-- Seção para listar evento e participantes -->
+        <TextField fx:id="nomeEventoListarField" promptText="Nome do Evento para Listar"/>
+        <CheckBox fx:id="mostrarParticipantesCheckBox" text="Mostrar Participantes"/>
+        <Button text="Listar Evento" onAction="#listarEvento"/>
+
+        <!-- Separador visual entre os botões -->
+        <Separator/>
+
+        <!-- Botão para listar todos os eventos -->
+        <Button text="Listar Todos Eventos" onAction="#listarTodosEventos"/>
+
+        <!-- Exibição do resultado -->
+        <TextArea fx:id="resultadoTextArea" editable="false" wrapText="true"/>
+
+        <!-- Botões para Importar e Exportar CSV -->
+        <Button text="Importar CSV" onAction="#importarCSV"/>
+        <Button text="Exportar CSV" onAction="#exportarCSV"/>
+
+    </children>
+</VBox>

@@ -1,0 +1,69 @@
+.root {
+    -fx-background-color: #1d1f21; /* Cor de fundo escura */
+    -fx-border-color: #2d2f31;      /* Borda escura */
+    -fx-border-width: 2;            /* Largura da borda */
+    -fx-border-radius: 5;           /* Bordas arredondadas */
+}
+
+/* Estilo para o título principal */
+.main-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-fill: #FFD700; /* Dourado */
+    -fx-padding: 10 0;
+}
+
+/* Labels com cores claras */
+.label, .text-fill {
+    -fx-text-fill: #E0E0E0; /* Cor de texto clara */
+}
+
+/* Estilo para TextField */
+.text-field {
+    -fx-background-color: #333;
+    -fx-text-fill: #E0E0E0; /* Cor de texto clara */
+    -fx-border-color: #555;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}
+
+/* Botões com cor azul */
+.button {
+    -fx-background-color: #1A73E8; /* Azul */
+    -fx-text-fill: #FFFFFF; /* Texto branco */
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1554B3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilo para TextArea (área onde aparece a lista de eventos) */
+.text-area {
+    -fx-background-color: #2E2E2E; /* Cinza escuro */
+    -fx-text-fill: #000000; /* Cor de texto clara */
+    -fx-border-color: #555;
+    -fx-padding: 10;
+}
+
+/* Checkbox */
+.check-box {
+    -fx-text-fill: #E0E0E0;
+    -fx-padding: 5;
+}
+
+/* Separador */
+.separator {
+    -fx-background-color: #444;
+    -fx-padding: 10 0;
+}
+
+/* Estilo para Mensagem de status */
+.mensagem-label {
+    -fx-text-fill: #FFD700;
+    -fx-font-weight: bold;
+}
+
